@@ -8,7 +8,7 @@ var app = express();
 //Conexion de BD
 mongoose.connection.openUri('mongodb://localhost:27017/MAPLY', (err, res) => {
     if (err) throw err;
-    console.log('Base de datos MAPLY \x1b[34m%s\x1b[0m', 'Online');
+    console.log('BD MAPLY \x1b[34m%s\x1b[0m', 'Activa');
 });
 //Creacion de Rutas
 app.get('/', (req, res, next) => {
@@ -20,5 +20,5 @@ app.get('/', (req, res, next) => {
 
 //Escucha de peticiones
 app.listen(3000, () => {
-    console.log('Express Arriba, Online sobre \x1b[34m%s\x1b[0m', 'puerto 3000');
+    console.log('Express Up, Online sobre \x1b[34m%s\x1b[0m', 'puerto 3000');
 })
