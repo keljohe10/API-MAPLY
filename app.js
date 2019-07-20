@@ -6,19 +6,19 @@ var mongoose = require('mongoose');
 var app = express();
 
 //Conexion de BD
-mongoose.connection.openUri('mongodb://localhost:27017/MAPLY', (err, res)=>{
-    if(err) throw err;
-    console.log('Base de datos MAPLY \x1b[34m%s\x1b[0m','Online');
+mongoose.connection.openUri('mongodb://localhost:27017/MAPLY', (err, res) => {
+    if (err) throw err;
+    console.log('Base de datos MAPLY \x1b[34m%s\x1b[0m', 'Online');
 });
 //Creacion de Rutas
-app.get('/',(req,res,next)=>{
+app.get('/', (req, res, next) => {
     res.status(200).json({
-        ok : true,
-        mensaje : 'Operación Correcta'
+        ok: true,
+        mensaje: 'Done!!'
     });
 });
 
 //Escucha de peticiones
-app.listen(3000, ()=>{
+app.listen(3000, () => {
     console.log('Express Arriba, Online sobre \x1b[34m%s\x1b[0m', 'puerto 3000');
 })
