@@ -1,8 +1,18 @@
-function userPersonalMedico(req, res, next) {
+const User = require('../../models/personalMedico');
 
-    res.status(200).json({
-        ok: "funciona"
-    })
+async function userPersonalMedico(req, res, next) {
+
+    try {
+        const user = await User.find({ id: 1 });
+
+        res.status(200).json({
+            user
+        })
+    } catch (error) {
+        next(error);
+    }
+
+
 }
 
 module.exports = [userPersonalMedico];
