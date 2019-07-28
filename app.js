@@ -16,7 +16,6 @@ const {
 //Iniciar Variables
 const app = express();
 
-
 // Cors enable
 
 app.use(function(req, res, next) {
@@ -35,7 +34,7 @@ app.use(bodyParser.json())
 //Conexion de BD
 mongoose.connection.openUri(`mongodb+srv://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_HOST}/${MONGO_DATABASE}?retryWrites=true&w=majority`, (err, res) => {
     if (err) throw err;
-    console.log('DB \x1b[34m%s\x1b[0m', 'Online');
+    console.log('DB \x1b[34m%s\x1b[0m', 'Online!!');
 });
 
 //Escucha de peticiones
