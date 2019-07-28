@@ -12,6 +12,8 @@ router.get('/', function(req, res) {
 //user
 const userControllers = require('./src/controllers/personalMedico');
 router.get('/user', userControllers.userPersonalMedico);
+router.post('/user', userControllers.createPersonalMedico);
+
 
 
 module.exports = router;
