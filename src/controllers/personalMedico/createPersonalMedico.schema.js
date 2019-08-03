@@ -4,6 +4,7 @@ const joi = joiBase.extend(joiDateExtension);
 
 const schema = {
     body: {
+        id: joi.number().required().description('Identificacion personal medico'),
         nombre: joi.string().required().description('Nombre personal medico'),
         apellido: joi.string().required().description('Apellido personal medico'),
         email: joi.string().email().required().description('Email personal medico'),
