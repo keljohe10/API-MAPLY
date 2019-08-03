@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const pMedicoSchema = new Schema({
+    id: { type: Number, unique: true , index: true, required : [true, 'campo obligatorio']},
     nombre: { type: String, required: [true, 'campo obligatorio'] },
     apellido: { type: String, required: [true, 'campo obligatorio'] },
     email: { type: String, unique: true, index: true, required: [true, 'campo obligatorio'] },

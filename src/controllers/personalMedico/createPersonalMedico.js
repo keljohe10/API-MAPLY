@@ -9,6 +9,7 @@ async function createPersonalMedico(req, res, next) {
         const data = req.body;
 
         await PMedico.create({
+            id: data.id,
             nombre: data.nombre,
             apellido: data.apellido,
             email: data.email,
