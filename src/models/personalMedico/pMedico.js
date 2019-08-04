@@ -9,7 +9,6 @@ const pMedicoSchema = new Schema({
     nombre: { type: String, required: [true, 'campo obligatorio'] },
     apellido: { type: String, required: [true, 'campo obligatorio'] },
     email: { type: String, unique: true, index: true, required: [true, 'campo obligatorio'] },
-    fechanac: { type: Date, required: [true, 'campo obligatorio'] },
     genero: { type: String, required: [true, 'campo obligatorio'] },
     password: { type: String, required: [true, 'campo obligatorio'] },
     eps: { type: String, required: [true, 'campo obligatorio'] },
