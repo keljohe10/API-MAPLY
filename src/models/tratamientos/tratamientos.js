@@ -1,6 +1,6 @@
-const moongose = require('mongoose');
+const mongoose = require('mongoose');
 
-const Schema = moongose.Schema;
+const Schema = mongoose.Schema;
 
 const tratamientoSchema = new Schema({
     id: { type: Number, unique: true , index: true, required : [true, 'campo obligatorio']},
@@ -18,3 +18,5 @@ const tratamientoSchema = new Schema({
         }
       ]
 });
+
+module.exports = mongoose.model('Tratamiento', tratamientoSchema);

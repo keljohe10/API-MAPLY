@@ -20,6 +20,11 @@ router.get(
 );
 router.post("/user", userControllers.createPersonalMedico);
 
+//Tratamiento
+const tratamientoControllers = require("./src/controllers/tratamiento");
+router.post("/tratamiento", tratamientoControllers.crearTratamiento);
+
+
 //signUp
 const signUpControllers = require("./src/controllers/signUp");
 router.post("/login", signUpControllers.login);
