@@ -23,7 +23,9 @@ async function createPersonalMedico(req, res, next) {
             usuario
         });
     } catch (error) {
-        return next(error);
+        
+         next(error);
+         return res.status(400).json({error});
     }
 }
 
