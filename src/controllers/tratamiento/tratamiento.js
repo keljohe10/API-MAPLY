@@ -17,9 +17,10 @@ async function crearTratamiento(req, res, next) {
         });
 
         return res.status(200).send();
-    } catch (error) {        
+    } catch (error) { 
+        
+        res.status(400).json({error});       
          next(error);
-         return res.status(400).json({error});
     }
 }
 
